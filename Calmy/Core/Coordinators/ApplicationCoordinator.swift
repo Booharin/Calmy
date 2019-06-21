@@ -11,6 +11,10 @@ final class ApplicationCoordinator: BaseCoordinator {
     
     override func start() {
         showLaunch()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.toMain()
+        })
     }
     
     private func showLaunch() {
