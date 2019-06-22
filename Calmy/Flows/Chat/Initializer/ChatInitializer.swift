@@ -8,8 +8,10 @@
 
 class ChatInitializer {
     func initModule() -> ChatViewController {
-        let controller = ChatViewController(collectionViewLayout: .init())
+        let controller = ChatViewController()
         let presenter = ChatPresenter()
+        let dataStorage = ChatDataStorage()
+        presenter.dataStorage = dataStorage
         presenter.view = controller
         controller.presenter = presenter
         

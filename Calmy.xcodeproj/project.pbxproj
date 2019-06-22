@@ -22,7 +22,6 @@
 		D93BC85322BCD15100BCA19A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93BC85222BCD15100BCA19A /* AuthCoordinator.swift */; };
 		D9468B3B22BD64A8009B52A5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B3A22BD64A8009B52A5 /* MainTabBarController.swift */; };
 		D9468B3E22BD658D009B52A5 /* ChatCoordintor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B3D22BD658D009B52A5 /* ChatCoordintor.swift */; };
-		D9468B4122BD6ED9009B52A5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B4022BD6ED9009B52A5 /* ChatViewController.swift */; };
 		D9468B4822BD70C0009B52A5 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B4722BD70C0009B52A5 /* MainNavigationController.swift */; };
 		D9468B4B22BD713E009B52A5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B4922BD713E009B52A5 /* AuthViewController.swift */; };
 		D9468B4C22BD713E009B52A5 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9468B4A22BD713E009B52A5 /* AuthViewController.xib */; };
@@ -34,6 +33,13 @@
 		D9468B6722BD7D98009B52A5 /* RecoveryPasswordInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B6622BD7D98009B52A5 /* RecoveryPasswordInitializer.swift */; };
 		D9468B6922BD7DBB009B52A5 /* RecoveryPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B6822BD7DBB009B52A5 /* RecoveryPasswordPresenter.swift */; };
 		D9468B6C22BD80A0009B52A5 /* ChatInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B6B22BD80A0009B52A5 /* ChatInitializer.swift */; };
+		D9468B7022BE9408009B52A5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B6F22BE9408009B52A5 /* ChatViewController.swift */; };
+		D9468B7322BE97CD009B52A5 /* CalmyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B7122BE97CD009B52A5 /* CalmyViewCell.swift */; };
+		D9468B7422BE97CD009B52A5 /* CalmyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9468B7222BE97CD009B52A5 /* CalmyViewCell.xib */; };
+		D9468B7822BE9A76009B52A5 /* UserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B7622BE9A76009B52A5 /* UserViewCell.swift */; };
+		D9468B7922BE9A76009B52A5 /* UserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9468B7722BE9A76009B52A5 /* UserViewCell.xib */; };
+		D9468B7E22BEB86A009B52A5 /* ChatDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B7D22BEB86A009B52A5 /* ChatDataStorage.swift */; };
+		D9468B8122BEB8B8009B52A5 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B8022BEB8B8009B52A5 /* ChatMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +60,6 @@
 		D93BC85222BCD15100BCA19A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		D9468B3A22BD64A8009B52A5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D9468B3D22BD658D009B52A5 /* ChatCoordintor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordintor.swift; sourceTree = "<group>"; };
-		D9468B4022BD6ED9009B52A5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D9468B4722BD70C0009B52A5 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		D9468B4922BD713E009B52A5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		D9468B4A22BD713E009B52A5 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
@@ -66,6 +71,13 @@
 		D9468B6622BD7D98009B52A5 /* RecoveryPasswordInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordInitializer.swift; sourceTree = "<group>"; };
 		D9468B6822BD7DBB009B52A5 /* RecoveryPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordPresenter.swift; sourceTree = "<group>"; };
 		D9468B6B22BD80A0009B52A5 /* ChatInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInitializer.swift; sourceTree = "<group>"; };
+		D9468B6F22BE9408009B52A5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D9468B7122BE97CD009B52A5 /* CalmyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmyViewCell.swift; sourceTree = "<group>"; };
+		D9468B7222BE97CD009B52A5 /* CalmyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalmyViewCell.xib; sourceTree = "<group>"; };
+		D9468B7622BE9A76009B52A5 /* UserViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewCell.swift; sourceTree = "<group>"; };
+		D9468B7722BE9A76009B52A5 /* UserViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewCell.xib; sourceTree = "<group>"; };
+		D9468B7D22BEB86A009B52A5 /* ChatDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataStorage.swift; sourceTree = "<group>"; };
+		D9468B8022BEB8B8009B52A5 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,7 @@
 		D93BC83F22BCCCFC00BCA19A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D9468B7F22BEB8A1009B52A5 /* Models */,
 				D90033F422BCDAC400F40B64 /* Helpers */,
 				D93BC84922BCCF0D00BCA19A /* Extensions */,
 				D93BC84822BCCEF900BCA19A /* Constants */,
@@ -213,6 +226,7 @@
 		D9468B3C22BD6569009B52A5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				D9468B7C22BEB850009B52A5 /* DataStorage */,
 				D9468B6A22BD8089009B52A5 /* Initializer */,
 				D9468B5822BD777F009B52A5 /* View */,
 				D9468B5922BD778E009B52A5 /* Presenter */,
@@ -251,7 +265,8 @@
 		D9468B5822BD777F009B52A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D9468B4022BD6ED9009B52A5 /* ChatViewController.swift */,
+				D9468B7522BE97D5009B52A5 /* Cells */,
+				D9468B6F22BE9408009B52A5 /* ChatViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +337,49 @@
 			path = Initializer;
 			sourceTree = "<group>";
 		};
+		D9468B7522BE97D5009B52A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B7A22BE9A7C009B52A5 /* CalmyViewCell */,
+				D9468B7B22BE9A8E009B52A5 /* UserViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D9468B7A22BE9A7C009B52A5 /* CalmyViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B7122BE97CD009B52A5 /* CalmyViewCell.swift */,
+				D9468B7222BE97CD009B52A5 /* CalmyViewCell.xib */,
+			);
+			path = CalmyViewCell;
+			sourceTree = "<group>";
+		};
+		D9468B7B22BE9A8E009B52A5 /* UserViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B7622BE9A76009B52A5 /* UserViewCell.swift */,
+				D9468B7722BE9A76009B52A5 /* UserViewCell.xib */,
+			);
+			path = UserViewCell;
+			sourceTree = "<group>";
+		};
+		D9468B7C22BEB850009B52A5 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B7D22BEB86A009B52A5 /* ChatDataStorage.swift */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		D9468B7F22BEB8A1009B52A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B8022BEB8B8009B52A5 /* ChatMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,8 +441,10 @@
 				D9468B5122BD72E8009B52A5 /* RecoveryPasswordViewController.xib in Resources */,
 				D93BC83422BB73F200BCA19A /* LaunchScreen.storyboard in Resources */,
 				D90033F322BCD9D400F40B64 /* LaunchScreen.storyboard in Resources */,
+				D9468B7922BE9A76009B52A5 /* UserViewCell.xib in Resources */,
 				D9468B4C22BD713E009B52A5 /* AuthViewController.xib in Resources */,
 				D93BC83122BB73F200BCA19A /* Assets.xcassets in Resources */,
+				D9468B7422BE97CD009B52A5 /* CalmyViewCell.xib in Resources */,
 				D93BC82F22BB73F100BCA19A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,15 +459,19 @@
 				D9468B6C22BD80A0009B52A5 /* ChatInitializer.swift in Sources */,
 				D90033F622BCDB1400F40B64 /* StoryboardHelper.swift in Sources */,
 				D93BC84B22BCCF4500BCA19A /* Constants.swift in Sources */,
+				D9468B8122BEB8B8009B52A5 /* ChatMessage.swift in Sources */,
 				D9468B6722BD7D98009B52A5 /* RecoveryPasswordInitializer.swift in Sources */,
 				D9468B3B22BD64A8009B52A5 /* MainTabBarController.swift in Sources */,
 				D93BC85122BCD12A00BCA19A /* MainCoordinator.swift in Sources */,
 				D9468B6122BD7882009B52A5 /* AuthPresenter.swift in Sources */,
 				D9468B5022BD72E8009B52A5 /* RecoveryPasswordViewController.swift in Sources */,
 				D9468B4822BD70C0009B52A5 /* MainNavigationController.swift in Sources */,
+				D9468B7822BE9A76009B52A5 /* UserViewCell.swift in Sources */,
 				D9468B5722BD774A009B52A5 /* ChatPresenter.swift in Sources */,
+				D9468B7022BE9408009B52A5 /* ChatViewController.swift in Sources */,
 				D93BC84E22BCCFCF00BCA19A /* LaunchViewController.swift in Sources */,
 				D93BC82C22BB73F100BCA19A /* ViewController.swift in Sources */,
+				D9468B7322BE97CD009B52A5 /* CalmyViewCell.swift in Sources */,
 				D93BC84522BCCE1100BCA19A /* BaseCoordinator.swift in Sources */,
 				D93BC82A22BB73F100BCA19A /* AppDelegate.swift in Sources */,
 				D9468B3E22BD658D009B52A5 /* ChatCoordintor.swift in Sources */,
@@ -415,8 +479,8 @@
 				D9468B6422BD7A51009B52A5 /* AuthInitializer.swift in Sources */,
 				D93BC85322BCD15100BCA19A /* AuthCoordinator.swift in Sources */,
 				D9468B6922BD7DBB009B52A5 /* RecoveryPasswordPresenter.swift in Sources */,
-				D9468B4122BD6ED9009B52A5 /* ChatViewController.swift in Sources */,
 				D93BC84722BCCEB000BCA19A /* ApplicationCoordinator.swift in Sources */,
+				D9468B7E22BEB86A009B52A5 /* ChatDataStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
