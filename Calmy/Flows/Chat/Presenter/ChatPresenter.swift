@@ -6,11 +6,14 @@
 //  Copyright © 2019 Booharin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ChatPresenterInput {
     var messages: [ChatMessage] { get }
     func inComingMessage()
+    func getLastMessageRow() -> Int
+    func createCustomStatusBarView()
+    func removeGradientLayer()
 }
 
 protocol ChatPresenterOutput: class {
@@ -20,6 +23,7 @@ protocol ChatPresenterOutput: class {
 class ChatPresenter: ChatPresenterInput {
     weak var view: ChatPresenterOutput!
     var dataStorage: ChatDataStorage!
+    private var gradientLayer: CAGradientLayer?
     
     var messages: [ChatMessage] {
         return dataStorage.messages
@@ -27,5 +31,27 @@ class ChatPresenter: ChatPresenterInput {
     
     func inComingMessage() {
         dataStorage.messages.append(ChatMessage(text: "It's ok, it's checking, how you mood?", type: .calmy))
+    }
+    
+    func getLastMessageRow() -> Int {
+        let count = dataStorage.messages.count - 1
+        return count < 1 ? 0 : count
+    }
+    
+    func createCustomStatusBarView() {
+        let colorTop = Constants.Colors.backgroundChatColor.cgColor
+        let colorBottom = Constants.Colors.backgroundChatColor.withAlphaComponent(0.0).cgColor
+        
+        guard gradientLayer == nil else { return }
+        gradientLayer = CAGradientLayer()
+        gradientLayer?.colors = [colorTop, colorBottom]
+        gradientLayer?.locations = [0.0, 1.0]
+        gradientLayer?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 150)
+        UIApplication.shared.statusBarView?.layer.insertSublayer(gradientLayer ?? CAGradientLayer(), at: 0)
+    }
+    
+    func removeGradientLayer() {
+        gradientLayer?.removeFromSuperlayer()
+        gradientLayer = nil
     }
 }

@@ -40,6 +40,8 @@
 		D9468B7922BE9A76009B52A5 /* UserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9468B7722BE9A76009B52A5 /* UserViewCell.xib */; };
 		D9468B7E22BEB86A009B52A5 /* ChatDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B7D22BEB86A009B52A5 /* ChatDataStorage.swift */; };
 		D9468B8122BEB8B8009B52A5 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B8022BEB8B8009B52A5 /* ChatMessage.swift */; };
+		D9468B8322BF97A0009B52A5 /* UIApplication+StatusBatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B8222BF97A0009B52A5 /* UIApplication+StatusBatView.swift */; };
+		D9468B8722BFD483009B52A5 /* MainTabBarInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9468B8622BFD483009B52A5 /* MainTabBarInitializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		D9468B7722BE9A76009B52A5 /* UserViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewCell.xib; sourceTree = "<group>"; };
 		D9468B7D22BEB86A009B52A5 /* ChatDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataStorage.swift; sourceTree = "<group>"; };
 		D9468B8022BEB8B8009B52A5 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		D9468B8222BF97A0009B52A5 /* UIApplication+StatusBatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+StatusBatView.swift"; sourceTree = "<group>"; };
+		D9468B8622BFD483009B52A5 /* MainTabBarInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		D93BC84922BCCF0D00BCA19A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D9468B8222BF97A0009B52A5 /* UIApplication+StatusBatView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,7 +223,8 @@
 		D93BC84F22BCD00900BCA19A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D9468B3A22BD64A8009B52A5 /* MainTabBarController.swift */,
+				D9468B8522BFD467009B52A5 /* Initializer */,
+				D9468B8422BFD45C009B52A5 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -380,6 +386,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D9468B8422BFD45C009B52A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B3A22BD64A8009B52A5 /* MainTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9468B8522BFD467009B52A5 /* Initializer */ = {
+			isa = PBXGroup;
+			children = (
+				D9468B8622BFD483009B52A5 /* MainTabBarInitializer.swift */,
+			);
+			path = Initializer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -459,10 +481,12 @@
 				D9468B6C22BD80A0009B52A5 /* ChatInitializer.swift in Sources */,
 				D90033F622BCDB1400F40B64 /* StoryboardHelper.swift in Sources */,
 				D93BC84B22BCCF4500BCA19A /* Constants.swift in Sources */,
+				D9468B8322BF97A0009B52A5 /* UIApplication+StatusBatView.swift in Sources */,
 				D9468B8122BEB8B8009B52A5 /* ChatMessage.swift in Sources */,
 				D9468B6722BD7D98009B52A5 /* RecoveryPasswordInitializer.swift in Sources */,
 				D9468B3B22BD64A8009B52A5 /* MainTabBarController.swift in Sources */,
 				D93BC85122BCD12A00BCA19A /* MainCoordinator.swift in Sources */,
+				D9468B8722BFD483009B52A5 /* MainTabBarInitializer.swift in Sources */,
 				D9468B6122BD7882009B52A5 /* AuthPresenter.swift in Sources */,
 				D9468B5022BD72E8009B52A5 /* RecoveryPasswordViewController.swift in Sources */,
 				D9468B4822BD70C0009B52A5 /* MainNavigationController.swift in Sources */,

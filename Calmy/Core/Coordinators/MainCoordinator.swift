@@ -17,13 +17,9 @@ final class MainCoordinator: BaseCoordinator {
     }
     
     private func showMain() {
-        let rootController = MainTabBarController()
-        
-        let chatViewController = ChatInitializer().initModule()
-        chatViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
-        rootController.viewControllers = [chatViewController]
-        
-        setAsRoot(rootController)
-        self.rootController = rootController
+        if let mainController = MainTabBarInitializer().initModule() {
+            self.rootController = mainController
+            setAsRoot(mainController)
+        }
     }
 }

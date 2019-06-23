@@ -18,8 +18,15 @@ class ChatViewController: UITableViewController {
     override func loadView() {
         super.loadView()
         
-        view.backgroundColor = #colorLiteral(red: 0.9560663104, green: 0.8254106641, blue: 0.5999184251, alpha: 1)
+        view.backgroundColor = Constants.Colors.backgroundChatColor
+        presenter.createCustomStatusBarView()
         setTableView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        presenter.removeGradientLayer()
     }
     
     private func setTableView() {
@@ -66,33 +73,24 @@ class ChatViewController: UITableViewController {
         didUpdateMessages()
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.alpha = 0
-        
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 0.05 * Double(indexPath.row),
-            animations: {
-                cell.alpha = 1
-        })
-    }
-    
-    func scrollToBottom() {
-        DispatchQueue.main.async {
-            let row = self.presenter.messages.count < 1 ? 0 : self.presenter.messages.count - 1
-            let indexPath = IndexPath(row: row,
-                                      section: 0)
-            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-        }
+    private func scrollToBottom(row: Int) {
+        let indexPath = IndexPath(row: row,
+                                  section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
 }
 
 extension ChatViewController: ChatPresenterOutput {
     
     func didUpdateMessages() {
-        let row = self.presenter.messages.count < 1 ? 0 : self.presenter.messages.count - 1
+        let row = presenter.getLastMessageRow()
+        
         let indexPath = IndexPath(row: row, section: 0)
-        tableView.insertRows(at: [indexPath], with: .fade)
-        self.scrollToBottom()
+        DispatchQueue.main.async {
+            self.tableView.insertRows(at: [indexPath], with: .fade)
+            self.scrollToBottom(row: row)
+        }
     }
 }
+
+
