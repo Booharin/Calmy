@@ -10,6 +10,9 @@ import UIKit
 struct Constants {
     struct Colors {
         static let backgroundChatColor = #colorLiteral(red: 0.9560663104, green: 0.8254106641, blue: 0.5999184251, alpha: 1)
+        static let calmyMessageBorderColor = #colorLiteral(red: 0.4060899019, green: 0.3471738696, blue: 0.2612999082, alpha: 1)
+        static let userMessageBorderColor = #colorLiteral(red: 0.229894042, green: 0.2210073173, blue: 0.3898516297, alpha: 1)
         static let tabBarTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        static let userMessageBackgroundColor = #colorLiteral(red: 0.3085948825, green: 0.294490099, blue: 0.5052183867, alpha: 1)
     }
 }

@@ -19,6 +19,8 @@ class CalmyViewCell: UITableViewCell {
         super.awakeFromNib()
         
         containerView.layer.cornerRadius = 15
+        containerView.layer.borderColor = Constants.Colors.calmyMessageBorderColor.cgColor
+        containerView.layer.borderWidth = 0.25
         selectionStyle = .none
     }
 }

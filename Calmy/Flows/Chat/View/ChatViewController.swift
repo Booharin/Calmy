@@ -14,6 +14,7 @@ class ChatViewController: UITableViewController {
     private let rowHeight: CGFloat = 44
     private let headerHeight: CGFloat = 50
     private let bottomOffset: CGFloat = 100
+    private var userButtons = [UIView]()
     
     override func loadView() {
         super.loadView()
@@ -21,6 +22,7 @@ class ChatViewController: UITableViewController {
         view.backgroundColor = Constants.Colors.backgroundChatColor
         presenter.createCustomStatusBarView()
         setTableView()
+        addUserButton(to: -50)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -41,6 +43,44 @@ class ChatViewController: UITableViewController {
                            forCellReuseIdentifier: "CalmyViewCell")
         tableView.register(UINib(nibName: "UserViewCell", bundle: nil),
                            forCellReuseIdentifier: "UserViewCell")
+    }
+    
+    private func addUserButton(to bottomOffset: CGFloat) {
+        let userView = UIView()
+        userView.translatesAutoresizingMaskIntoConstraints = false
+        userView.backgroundColor = Constants.Colors.userMessageBackgroundColor
+        userView.layer.cornerRadius = 15
+        userView.layer.borderColor = Constants.Colors.userMessageBackgroundColor.cgColor
+        userView.layer.borderWidth = 0.25
+        view.addSubview(userView)
+        
+        let margins = view.layoutMarginsGuide
+        userView.leadingAnchor.constraint(greaterThanOrEqualTo: margins.leadingAnchor, constant: 80).isActive = true
+        userView.trailingAnchor.constraint(equalTo: margins.trailingAnchor,constant: 8).isActive = true
+        userView.bottomAnchor.constraint(equalTo: margins.bottomAnchor,constant: bottomOffset).isActive = true
+        
+        let label = UILabel()
+        label.backgroundColor = .clear
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "I'm ok, it's done"
+        label.numberOfLines = 0
+        label.textColor = .white
+        userView.addSubview(label)
+        label.leadingAnchor.constraint(equalTo: userView.leadingAnchor, constant: 10).isActive = true
+        label.trailingAnchor.constraint(equalTo: userView.trailingAnchor, constant: -10).isActive = true
+        label.topAnchor.constraint(equalTo: userView.topAnchor, constant: 7).isActive = true
+        label.bottomAnchor.constraint(equalTo: userView.bottomAnchor, constant: -7).isActive = true
+        
+        let tap = UIGestureRecognizer(target: self, action: #selector(userTap))
+        userView.addGestureRecognizer(tap)
+        userView.isUserInteractionEnabled = true
+        
+        userButtons.append(userView)
+    }
+    
+    @objc func userTap() {
+        presenter.inComingMessage()
+        didUpdateMessages()
     }
 
     // MARK: - Table view data source

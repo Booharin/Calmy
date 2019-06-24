@@ -24,6 +24,7 @@ class ChatPresenter: ChatPresenterInput {
     weak var view: ChatPresenterOutput!
     var dataStorage: ChatDataStorage!
     private var gradientLayer: CAGradientLayer?
+    private let statusBarViewHeight: CGFloat = 100
     
     var messages: [ChatMessage] {
         return dataStorage.messages
@@ -46,7 +47,7 @@ class ChatPresenter: ChatPresenterInput {
         gradientLayer = CAGradientLayer()
         gradientLayer?.colors = [colorTop, colorBottom]
         gradientLayer?.locations = [0.0, 1.0]
-        gradientLayer?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 150)
+        gradientLayer?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: statusBarViewHeight)
         UIApplication.shared.statusBarView?.layer.insertSublayer(gradientLayer ?? CAGradientLayer(), at: 0)
     }
     
