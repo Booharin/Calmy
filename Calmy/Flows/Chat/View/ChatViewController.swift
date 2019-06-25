@@ -19,16 +19,17 @@ class ChatViewController: UITableViewController {
     override func loadView() {
         super.loadView()
         
-        view.backgroundColor = Constants.Colors.backgroundChatColor
         presenter.createCustomStatusBarView()
         setTableView()
-        addUserButton(to: -50)
+        view.backgroundColor = #colorLiteral(red: 0.9371172786, green: 0.9054889083, blue: 0.9954904914, alpha: 1)
+        
+        addUserButton(to: -50, text: "I'm ok, it's done")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        presenter.removeGradientLayer()
+        presenter.removeGradientLayerFromStatusBar()
     }
     
     private func setTableView() {
@@ -44,14 +45,15 @@ class ChatViewController: UITableViewController {
         tableView.register(UINib(nibName: "UserViewCell", bundle: nil),
                            forCellReuseIdentifier: "UserViewCell")
     }
-    
-    private func addUserButton(to bottomOffset: CGFloat) {
+    // TODO: - how check button height
+    private func addUserButton(to bottomOffset: CGFloat, text: String) {
         let userView = UIView()
         userView.translatesAutoresizingMaskIntoConstraints = false
         userView.backgroundColor = Constants.Colors.userMessageBackgroundColor
         userView.layer.cornerRadius = 15
         userView.layer.borderColor = Constants.Colors.userMessageBackgroundColor.cgColor
         userView.layer.borderWidth = 0.25
+        userView.alpha = 0
         view.addSubview(userView)
         
         let margins = view.layoutMarginsGuide
@@ -62,7 +64,7 @@ class ChatViewController: UITableViewController {
         let label = UILabel()
         label.backgroundColor = .clear
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "I'm ok, it's done"
+        label.text = text
         label.numberOfLines = 0
         label.textColor = .white
         userView.addSubview(label)
@@ -71,16 +73,21 @@ class ChatViewController: UITableViewController {
         label.topAnchor.constraint(equalTo: userView.topAnchor, constant: 7).isActive = true
         label.bottomAnchor.constraint(equalTo: userView.bottomAnchor, constant: -7).isActive = true
         
-        let tap = UIGestureRecognizer(target: self, action: #selector(userTap))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userTap))
         userView.addGestureRecognizer(tap)
         userView.isUserInteractionEnabled = true
         
         userButtons.append(userView)
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            userView.alpha = 1
+        })
     }
     
-    @objc func userTap() {
-        presenter.inComingMessage()
-        didUpdateMessages()
+    @objc func userTap(sender: UIView) {
+        addUserButton(to: -90, text: "I'm ok, it's done")
+        self.tabBarController?.tabBar.isHidden = true
+        
     }
 
     // MARK: - Table view data source

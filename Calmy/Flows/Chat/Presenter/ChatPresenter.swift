@@ -13,7 +13,7 @@ protocol ChatPresenterInput {
     func inComingMessage()
     func getLastMessageRow() -> Int
     func createCustomStatusBarView()
-    func removeGradientLayer()
+    func removeGradientLayerFromStatusBar()
 }
 
 protocol ChatPresenterOutput: class {
@@ -51,7 +51,7 @@ class ChatPresenter: ChatPresenterInput {
         UIApplication.shared.statusBarView?.layer.insertSublayer(gradientLayer ?? CAGradientLayer(), at: 0)
     }
     
-    func removeGradientLayer() {
+    func removeGradientLayerFromStatusBar() {
         gradientLayer?.removeFromSuperlayer()
         gradientLayer = nil
     }

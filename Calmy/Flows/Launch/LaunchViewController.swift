@@ -19,8 +19,8 @@ class LaunchViewController: UIViewController {
     }
     
     private func getGradientLayer() -> CAGradientLayer {
-        let colorTop = #colorLiteral(red: 0.9881975055, green: 0.8733022213, blue: 0.7819040418, alpha: 1).cgColor
-        let colorBottom = #colorLiteral(red: 0.741050005, green: 0.542275548, blue: 0.5064015388, alpha: 1).cgColor
+        let colorTop = #colorLiteral(red: 0.9371172786, green: 0.9054889083, blue: 0.9954904914, alpha: 1).cgColor
+        let colorBottom = #colorLiteral(red: 0.6727065444, green: 0.6017684937, blue: 0.7922822237, alpha: 1).cgColor
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
