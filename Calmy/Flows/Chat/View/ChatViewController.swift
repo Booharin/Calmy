@@ -82,12 +82,12 @@ class ChatViewController: UITableViewController {
         UIView.animate(withDuration: 0.4, animations: {
             userView.alpha = 1
         })
+        print(userView.layoutMarginsGuide.layoutFrame.height)
     }
     
     @objc func userTap(sender: UIView) {
         addUserButton(to: -90, text: "I'm ok, it's done")
         self.tabBarController?.tabBar.isHidden = true
-        
     }
 
     // MARK: - Table view data source

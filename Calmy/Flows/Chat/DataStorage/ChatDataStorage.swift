@@ -11,4 +11,8 @@ class ChatDataStorage {
         ChatMessage(text: "Hello, bro, how are you?", type: .calmy),
         ChatMessage(text: "Hello, calmy, I'm fine.", type: .user)
     ]
+    
+    var buttons = [
+        ChatButton(text: "Ok, I'm done", type: .action)
+    ]
 }

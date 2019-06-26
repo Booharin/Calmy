@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D90033F322BCD9D400F40B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90033F222BCD9D400F40B64 /* LaunchScreen.storyboard */; };
 		D90033F622BCDB1400F40B64 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90033F522BCDB1400F40B64 /* StoryboardHelper.swift */; };
+		D913A06A22C3B9DA001ED0B9 /* ChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913A06922C3B9DA001ED0B9 /* ChatButton.swift */; };
 		D93BC82A22BB73F100BCA19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93BC82922BB73F100BCA19A /* AppDelegate.swift */; };
 		D93BC82C22BB73F100BCA19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93BC82B22BB73F100BCA19A /* ViewController.swift */; };
 		D93BC82F22BB73F100BCA19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93BC82D22BB73F100BCA19A /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		D90033F222BCD9D400F40B64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D90033F522BCDB1400F40B64 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		D913A06922C3B9DA001ED0B9 /* ChatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatButton.swift; sourceTree = "<group>"; };
 		D93BC82622BB73F100BCA19A /* Calmy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calmy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93BC82922BB73F100BCA19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93BC82B22BB73F100BCA19A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				D9468B8022BEB8B8009B52A5 /* ChatMessage.swift */,
+				D913A06922C3B9DA001ED0B9 /* ChatButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				D9468B8122BEB8B8009B52A5 /* ChatMessage.swift in Sources */,
 				D9468B6722BD7D98009B52A5 /* RecoveryPasswordInitializer.swift in Sources */,
 				D9468B3B22BD64A8009B52A5 /* MainTabBarController.swift in Sources */,
+				D913A06A22C3B9DA001ED0B9 /* ChatButton.swift in Sources */,
 				D93BC85122BCD12A00BCA19A /* MainCoordinator.swift in Sources */,
 				D9468B8722BFD483009B52A5 /* MainTabBarInitializer.swift in Sources */,
 				D9468B6122BD7882009B52A5 /* AuthPresenter.swift in Sources */,
