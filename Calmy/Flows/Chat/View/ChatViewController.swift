@@ -21,9 +21,8 @@ class ChatViewController: UITableViewController {
         
         presenter.createCustomStatusBarView()
         setTableView()
-        view.backgroundColor = #colorLiteral(red: 0.9371172786, green: 0.9054889083, blue: 0.9954904914, alpha: 1)
-        
-        addUserButton(to: -50, text: "I'm ok, it's done")
+        view.backgroundColor = Constants.Colors.backgroundChatColor
+        addButtons()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,7 +44,19 @@ class ChatViewController: UITableViewController {
         tableView.register(UINib(nibName: "UserViewCell", bundle: nil),
                            forCellReuseIdentifier: "UserViewCell")
     }
-    // TODO: - how check button height
+    
+    
+    private func addButtons() {
+        var height: CGFloat = -50
+        
+        presenter.buttons.forEach() { button in
+            addUserButton(to: height, text: button.text)
+            if let lastButtonHeight = userButtons.last?.layoutMarginsGuide.layoutFrame.height {
+                height -= (lastButtonHeight + 20)
+            }
+        }
+    }
+    
     private func addUserButton(to bottomOffset: CGFloat, text: String) {
         let userView = UIView()
         userView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +79,7 @@ class ChatViewController: UITableViewController {
         label.numberOfLines = 0
         label.textColor = .white
         userView.addSubview(label)
+        
         label.leadingAnchor.constraint(equalTo: userView.leadingAnchor, constant: 10).isActive = true
         label.trailingAnchor.constraint(equalTo: userView.trailingAnchor, constant: -10).isActive = true
         label.topAnchor.constraint(equalTo: userView.topAnchor, constant: 7).isActive = true
@@ -82,11 +94,13 @@ class ChatViewController: UITableViewController {
         UIView.animate(withDuration: 0.4, animations: {
             userView.alpha = 1
         })
-        print(userView.layoutMarginsGuide.layoutFrame.height)
     }
     
     @objc func userTap(sender: UIView) {
-        addUserButton(to: -90, text: "I'm ok, it's done")
+        presenter.inComingMessage()
+        didUpdateMessages()
+        
+        guard self.tabBarController?.tabBar.isHidden == false else { return }
         self.tabBarController?.tabBar.isHidden = true
     }
 
@@ -113,11 +127,6 @@ class ChatViewController: UITableViewController {
             cell.messageLabel.text = message.text
             return cell
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.inComingMessage()
-        didUpdateMessages()
     }
     
     private func scrollToBottom(row: Int) {

@@ -13,6 +13,7 @@ class ChatDataStorage {
     ]
     
     var buttons = [
-        ChatButton(text: "Ok, I'm done", type: .action)
+        ChatButton(text: "Ok, I'm done", type: .action),
+        ChatButton(text: "All right, let's try", type: .action)
     ]
 }

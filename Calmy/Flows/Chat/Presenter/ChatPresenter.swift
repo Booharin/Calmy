@@ -10,6 +10,8 @@ import UIKit
 
 protocol ChatPresenterInput {
     var messages: [ChatMessage] { get }
+    var buttons: [ChatButton] { get }
+    
     func inComingMessage()
     func getLastMessageRow() -> Int
     func createCustomStatusBarView()
@@ -28,6 +30,10 @@ class ChatPresenter: ChatPresenterInput {
     
     var messages: [ChatMessage] {
         return dataStorage.messages
+    }
+    
+    var buttons: [ChatButton] {
+        return dataStorage.buttons
     }
     
     func inComingMessage() {
